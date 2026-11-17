@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haruhi Egawa — Software Development</title>
+<meta name="description" content="Personal developer page of Haruhi Egawa (a2taka-sourse): machine learning models, verification studies, simulation and creative tooling.">
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2.5rem auto; padding: 0 1rem; line-height: 1.65; }
+  h1 { font-size: 1.9rem; margin-bottom: .2rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; border-bottom: 1px solid #8884; padding-bottom: .3rem; }
+  .sub { opacity: .75; margin-top: 0; }
+  li { margin: .45rem 0; }
+  .num { font-variant-numeric: tabular-nums; }
+  footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+  a { text-decoration-thickness: 1px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Haruhi Egawa</h1>
+  <p class="sub">Software development — machine learning, verification, simulation.<br>
+  GitHub: <a href="https://github.com/a2taka-sourse">a2taka-sourse</a> · Osaka, Japan</p>
+</header>
+
+<p>I build machine-learning systems and the tooling around them, and I judge
+them by measurement: a result counts only after it survives re-validation
+against a baseline. This page is a short, factual index of that work.</p>
+
+<h2>Projects</h2>
+<ul>
+  <li><strong>Shogi NNUE evaluation port (YaneuraOu).</strong>
+    Ported an NNUE evaluation function and verified it against the reference
+    implementation: evaluation values matched exactly on
+    <span class="num">9,112</span> positions, at 2–3× the reference NPS.
+    Version 6, trained on <span class="num">41.41M</span> positions, scored
+    <span class="num">189 wins / 111 losses (63.0%)</span> against version 5.</li>
+  <li><strong>Horse-racing prediction ML — a verification study.</strong>
+    Compared 8 methods across 109 configurations. An apparent
+    <span class="num">101.2%</span> return did not survive re-validation:
+    over 354 fresh races it fell to <span class="num">62.8%</span>, below the
+    <span class="num">70.2%</span> baseline, so the model was rejected as
+    overfitted and not deployed. The negative result is the deliverable.</li>
+  <li><strong>Voice-synthesis data and evaluation pipeline.</strong>
+    Built a training corpus of <span class="num">6,989</span> lines
+    (<span class="num">7.08</span> hours) and an evaluation workflow based on
+    ASR word-error measurement and model-merging experiments. Only the code
+    and method are published; no voice data or trained voice models.</li>
+  <li><strong>Climate simulation pipeline.</strong>
+    A pipeline around NeuralGCM that turns climate-model output into terrain,
+    population and historical-simulation inputs for a fictional-world
+    simulation project, with an iterate-and-correct loop against the computed
+    results.</li>
+  <li><strong>Rendering and video tooling.</strong>
+    Customised Remotion / Skia rendering pipelines (12-thread parallel
+    drawing) and automated overnight build-and-edit queues for video work on a
+    local GPU machine (RTX 5060 Ti).</li>
+</ul>
+
+<h2>Competitions and courses</h2>
+<ul>
+  <li>University of Tokyo GCI (Global Consumer Intelligence), Matsuo–Iwasawa
+    Laboratory: Advanced course completion certificate and Competition High
+    Score Award (both dated 2026-09-30); “Large Language Models 1” completion
+    certificate (2026-09-16).</li>
+  <li>Matsuo Laboratory summer courses: “Deep Generative Models” and
+    “Large Language Models 1” (2026).</li>
+  <li>PARC 2026 (Physical AI Robot Challenge, AIRoA × Matsuo–Iwasawa Lab):
+    passed the qualifying round and competed in the main competition with a
+    VLA (vision-language-action) robot policy.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Email: <a href="mailto:egaharuhi@gmail.com">egaharuhi@gmail.com</a><br>
+GitHub: <a href="https://github.com/a2taka-sourse">github.com/a2taka-sourse</a></p>
+
+<footer>This is a personal, non-commercial page. No products are sold here.</footer>
+</body>
+</html>
